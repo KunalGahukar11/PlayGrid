@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #00be76;
+  --color-secondary: black;
+  --color-tertiary: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.border {
+  border: 1px solid black;
+}
