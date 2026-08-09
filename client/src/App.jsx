@@ -1,8 +1,14 @@
+import LoginScreen from "./pages/LoginScreen"
+import SignUpScreen from "./pages/SignUpScreen"
+import SplashScreen from "./pages/SplashScreen"
+
 function App() {
 
   return (
     <>
-      <h1>hello kunal</h1>
+      {/* <SplashScreen /> */}
+      {/* <LoginScreen /> */}
+      <SignUpScreen />
     </>
   )
 }
