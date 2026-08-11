@@ -1,3 +1,4 @@
+import ForotPasswordScreen from "./pages/ForotPasswordScreen"
 import LoginScreen from "./pages/LoginScreen"
 import SignUpScreen from "./pages/SignUpScreen"
 import SplashScreen from "./pages/SplashScreen"
@@ -8,7 +9,8 @@ function App() {
     <>
       {/* <SplashScreen /> */}
       {/* <LoginScreen /> */}
-      <SignUpScreen />
+      {/* <SignUpScreen /> */}
+      <ForotPasswordScreen />
     </>
   )
 }
