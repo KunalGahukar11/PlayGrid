@@ -1,7 +1,9 @@
-import ForotPasswordScreen from "./pages/ForotPasswordScreen"
+import ForotPasswordScreen from "./pages/ForgotPasswordScreen"
 import LoginScreen from "./pages/LoginScreen"
+import SavePasswordScreen from "./pages/SavePasswordScreen"
 import SignUpScreen from "./pages/SignUpScreen"
 import SplashScreen from "./pages/SplashScreen"
+import PlayGridRoutes from "./routes/PlayGridRoutes"
 
 function App() {
 
@@ -10,7 +12,9 @@ function App() {
       {/* <SplashScreen /> */}
       {/* <LoginScreen /> */}
       {/* <SignUpScreen /> */}
-      <ForotPasswordScreen />
+      {/* <ForotPasswordScreen /> */}
+      {/* <SavePasswordScreen /> */}
+      <PlayGridRoutes />
     </>
   )
 }
