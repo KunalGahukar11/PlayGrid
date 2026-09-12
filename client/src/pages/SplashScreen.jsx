@@ -1,8 +1,16 @@
 import React from 'react'
 import CricketBro from "../assets/images/Cricket-bro 1.svg"
 import PlayButton from '../components/PlayButton'
+import { useNavigate } from 'react-router-dom'
 
 const SplashScreen = () => {
+
+    const navigate = useNavigate();
+
+    const handleeClick = () => {
+        navigate('/login');
+    };
+
     return (
         <main className='flex flex-col items-center min-h-screen pt-18.25 pb-10'>
             <div className='mb-4'>
@@ -13,7 +21,7 @@ const SplashScreen = () => {
                 <img className='w-[85vw] max-w-85' src={CricketBro} alt="cricketboy" />
             </div>
             <div className='mt-auto w-full text-center'>
-                <PlayButton title="Get Started" />
+                <PlayButton title="Get Started" handleClick={handleeClick} />
             </div>
         </main>
     )

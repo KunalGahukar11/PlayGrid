@@ -11,6 +11,15 @@
   font-family: "Poppins", sans-serif;
 }
 
+@utility scrollbar-hide {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  scrollbar-width: none;
+}
+
+/* 
 .border {
   border: 1px solid black;
-}
+} */

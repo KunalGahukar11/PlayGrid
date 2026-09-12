@@ -2,7 +2,7 @@ import React from 'react'
 
 const AuthLayout = ({ title, subtitle = null, children }) => {
     return (
-        <main className='flex flex-col min-h-screen items-center px-6 pt-18'>
+        <main className='flex flex-col min-h-screen items-center justify-center'>
 
             <div className='text-center mb-10'>
                 <h1 className='font-semibold text-[32px] text-primary'>

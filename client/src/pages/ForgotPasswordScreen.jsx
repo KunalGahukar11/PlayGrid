@@ -1,6 +1,6 @@
 import React from 'react'
 import PlayButton from '../components/PlayButton'
-import ChangePasswordLayout from '../components/ChangePasswordLayout'
+import ChangePasswordLayout from '../layout/ChangePasswordLayout'
 
 const ForgotPasswordScreen = () => {
     return (

@@ -1,5 +1,5 @@
 import React from 'react'
-import ChangePasswordLayout from '../components/ChangePasswordLayout'
+import ChangePasswordLayout from '../layout/ChangePasswordLayout'
 import PlayInput from '../components/PlayInput'
 import PlayButton from '../components/PlayButton'
 import { EyeInvisibleOutlined, KeyOutlined } from '@ant-design/icons'
