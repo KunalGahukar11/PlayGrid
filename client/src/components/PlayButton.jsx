@@ -5,7 +5,7 @@ const PlayButton = ({ title, handleClick, type, disabled, buttonType }) => {
         <button type={type} className={`w-full max-w-85 h-12.5 rounded-[10px] font-medium text-[20px]
         ${buttonType === 'danger' ? 'bg-red-500' : 'bg-primary'}
          text-tertiary 
-         ${disabled ? 'cursor-not-allowed' : ''}`}
+         ${disabled ? 'cursor-not-allowed' : 'cursor-pointer'}`}
             onClick={handleClick}
             disabled={disabled}>
             {title}

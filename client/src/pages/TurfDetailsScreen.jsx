@@ -5,7 +5,6 @@ import { FaLocationDot, FaStar, FaGlassWater } from 'react-icons/fa6'
 import { FaRegHeart, FaRegCreditCard, FaQrcode, FaParking, FaToilet } from "react-icons/fa";
 import { MdOutlineSportsCricket } from "react-icons/md";
 import { PiCourtBasketball } from "react-icons/pi";
-import { motion } from 'framer-motion'
 import PlayButton from '../components/PlayButton';
 import PlayListItem from '../components/PlayListItem';
 import { useNavigate } from 'react-router-dom';
@@ -62,7 +61,7 @@ const TurfDetailsScreen = () => {
     ];
 
     return (
-        <main className='space-y-4'>
+        <main className='space-y-4 p-4'>
             <header className='relative'>
                 <Carousel autoplay>
                     <div>

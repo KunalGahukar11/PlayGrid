@@ -32,6 +32,10 @@ const SignUpScreen = () => {
     const handleChange = (e) => {
         const { name, value } = e.target;
 
+        if (name === 'contactNo' && !/^\d{0,10}$/.test(value)) {
+            return;
+        }
+
         dispatch({
             type: "SET_FIELD",
             field: name,
@@ -55,6 +59,14 @@ const SignUpScreen = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        if (!/^\d{10}$/.test(state.contactNo)) {
+            await messageApi.open({
+                type: 'error',
+                content: 'Invalid Contact No',
+            });
+            return;
+        }
 
         const hasEmptyField = Object.values(state.values).some(
             (value) => !value.trim()
@@ -122,7 +134,7 @@ const SignUpScreen = () => {
 
                         <PlayInput placeholder={"Contact No"}
                             prefix={<PhoneOutlined />}
-                            type={"number"}
+                            type={"tel"}
                             name="contactNo"
                             value={state.values.contactNo}
                             error={state.errors.contactNo}

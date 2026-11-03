@@ -1,10 +1,10 @@
 const mongoose = require("mongoose");
 
+const db_url = process.env.DB_URL;
+
 const dBConnection = async () => {
   try {
-    await mongoose.connect(
-      `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.wsvu5n6.mongodb.net/playgrid?appName=Cluster0`
-    );
+    await mongoose.connect(db_url);
     console.log("Database connected");
   } catch (error) {
     console.log("Database connection error", error);

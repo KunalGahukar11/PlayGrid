@@ -8,6 +8,7 @@ import HomeScreen from '../pages/HomeScreen'
 import MainLayout from '../layout/MainLayout'
 import BookingScreen from '../pages/BookingScreen'
 import TurfDetailsScreen from '../pages/TurfDetailsScreen'
+import SlotBookingScreen from '../pages/SlotBookingScreen'
 
 const PlayGridRoutes = () => {
     return (
@@ -19,9 +20,13 @@ const PlayGridRoutes = () => {
             <Route element={<ProtectedRoutes />}>
                 <Route element={<MainLayout />}>
                     <Route path='/home' element={<HomeScreen />} />
-                    <Route path='/turf/:id' element={<TurfDetailsScreen />} />
-                    <Route path='/booking/:id' element={<BookingScreen />} />
+                    <Route path='/booking' element={<BookingScreen />} />
                 </Route>
+            </Route>
+
+            <Route element={<ProtectedRoutes />}>
+                <Route path='/turf/:id' element={<TurfDetailsScreen />} />
+                <Route path='/slot/:id' element={<SlotBookingScreen />} />
             </Route>
 
         </Routes>
