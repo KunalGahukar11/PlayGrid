@@ -13,13 +13,13 @@ const SportsSection = () => {
             bgImg: sport1
         },
         {
-            name: 'Cricket',
-            value: 'cricket',
+            name: 'Basketball',
+            value: 'basketball',
             bgImg: sport2
         },
         {
-            name: 'Cricket',
-            value: 'cricket',
+            name: 'Swimming',
+            value: 'swimming',
             bgImg: sport3
         },
     ];

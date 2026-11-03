@@ -31,6 +31,7 @@ const PlayInput = ({ placeholder,
 
                     <input type={type === 'password' && isPassVisible ? 'text' : type}
                         placeholder={placeholder}
+                        maxLength={name === 'contactNo' ? 10 : undefined}
                         value={value}
                         name={name}
                         onChange={handleChange}

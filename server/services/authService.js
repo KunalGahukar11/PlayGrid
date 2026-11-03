@@ -3,7 +3,7 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const responseObj = require("../utls/responebj");
 
-const userServices = {
+const authServices = {
   signUp: async (userData) => {
     try {
       if (userData.password !== userData.confirmPassword) {
@@ -73,4 +73,4 @@ const userServices = {
   },
 };
 
-module.exports = userServices;
+module.exports = authServices;

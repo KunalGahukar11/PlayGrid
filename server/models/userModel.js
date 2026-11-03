@@ -23,6 +23,10 @@ const userSchema = new mongoose.Schema(
     confirmPassword: {
       type: String,
     },
+    role: {
+      enum: ["user", "owner", "admin"],
+      default: "user",
+    },
   },
   { timestamps: true }
 );
@@ -35,6 +39,6 @@ userSchema.pre("save", async function () {
   this.password = await bcrypt.hash(this.password, 10);
 });
 
-const userModel = mongoose.model("user", userSchema);
+const userModel = mongoose.model("User", userSchema);
 
 module.exports = userModel;

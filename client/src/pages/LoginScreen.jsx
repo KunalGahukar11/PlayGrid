@@ -1,15 +1,18 @@
 import React, { useReducer } from 'react'
 import PlayInput from '../components/PlayInput'
-import { UserOutlined, KeyOutlined, FacebookFilled, GoogleOutlined, AppleFilled, EyeInvisibleOutlined } from '@ant-design/icons'
+import { UserOutlined, KeyOutlined, FacebookFilled, GoogleOutlined, AppleFilled, EyeInvisibleOutlined, EyeFilled } from '@ant-design/icons'
 import PlayButton from '../components/PlayButton'
 import AuthLayout from '../layout/AuthLayout'
 import { useNavigate } from 'react-router-dom'
 import formReducer from '../reducers/formReducer'
 import authService from '../services/authService'
 import { message } from 'antd';
+import { useDispatch } from 'react-redux'
+import { getUser } from '../redux/slices/userSlice'
 
 const LoginScreen = () => {
     const navigate = useNavigate();
+    const reduxDispatch = useDispatch();
     const [messageApi, contextHolder] = message.useMessage();
     const [state, dispatch] = useReducer(formReducer, {
         values: {
@@ -91,14 +94,24 @@ const LoginScreen = () => {
                     content: "All Set!",
                     // duration: 2,
                 });
+
+                let info = {
+                    email: res.data.email,
+                    name: res.data.name
+                }
+
+                reduxDispatch(getUser(info));
+                localStorage.setItem('info', JSON.stringify(info));
                 let token = res.data.token;
                 localStorage.setItem('token', JSON.stringify(token));
                 navigate('/home');
                 console.log(res)
             } else {
                 messageApi.open({
+                    key,
                     type: 'error',
-                    content: res.message
+                    content: res.message,
+                    duration: 2
                 });
             }
         } catch (error) {
@@ -131,6 +144,7 @@ const LoginScreen = () => {
                             type={"password"}
                             prefix={<KeyOutlined />}
                             suffix={<EyeInvisibleOutlined />}
+                            altSuffix={<EyeFilled />}
                             value={state.values.password}
                             name="password"
                             error={state.errors.password}

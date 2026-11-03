@@ -16,7 +16,7 @@ const authService = {
   },
 
   login: async (credentials) => {
-    console.log(credentials);
+    // console.log(credentials);
 
     try {
       const res = await axios.post(

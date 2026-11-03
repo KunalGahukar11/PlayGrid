@@ -1,21 +1,13 @@
-import ForotPasswordScreen from "./pages/ForgotPasswordScreen"
-import LoginScreen from "./pages/LoginScreen"
-import SavePasswordScreen from "./pages/SavePasswordScreen"
-import SignUpScreen from "./pages/SignUpScreen"
-import SplashScreen from "./pages/SplashScreen"
+import store from "./redux/store"
 import PlayGridRoutes from "./routes/PlayGridRoutes"
+import { Provider } from 'react-redux'
 
 function App() {
 
   return (
-    <>
-      {/* <SplashScreen /> */}
-      {/* <LoginScreen /> */}
-      {/* <SignUpScreen /> */}
-      {/* <ForotPasswordScreen /> */}
-      {/* <SavePasswordScreen /> */}
+    <Provider store={store}>
       <PlayGridRoutes />
-    </>
+    </Provider>
   )
 }
 
